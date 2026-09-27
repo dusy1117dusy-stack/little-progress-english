@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#2457ed">
+  <meta name="description" content="每天四十分钟英语。手机与电脑同步打卡，记录自己的学习，按自己的节奏进步。">
+  <title>一点进步 · 学习打卡</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232457ed'/%3E%3Cpath d='M9 17l5 5 10-12' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到学习计划</a>
+  <aside class="sidebar">
+    <a class="brand" href="#today"><span class="brand-mark">↗</span><span>一点进步<small>把今天的一点，留下来。</small></span></a>
+    <div class="nav-label">我的学习空间</div>
+    <nav aria-label="主导航">
+      <button class="nav-item active" data-nav="today"><span class="nav-icon">◷</span>今日学习</button>
+      <button class="nav-item" data-nav="words"><span class="nav-icon">Aa</span>四级词汇</button>
+      <button class="nav-item" data-nav="history"><span class="nav-icon">▦</span>打卡日历</button>
+      <button class="nav-item" data-nav="plan"><span class="nav-icon">☷</span>学习计划</button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-label">给自己的提醒</span><p>不必一次学很多。<br>今天开始，就很好。</p><div class="note-line"></div></div>
+    <div class="sidebar-foot"><span class="avatar">我</span><div>我的成长记录<small>每天一点英语</small></div></div>
+  </aside>
+  <main id="main" tabindex="-1">
+    <header class="page-header"><div><div class="eyebrow" id="date-label">每天留一点时间给自己</div><h1 id="page-title">今天，也进步一点。</h1></div><span class="header-badge">每天 40 分钟</span></header>
+    <div id="app">
+      <section class="hero"><div><span class="hero-label">今日英语计划</span><div class="hero-number">0 <span>/ 40 分钟</span></div><p>从复习几个熟悉的表达开始。</p></div><div class="progress-orbit"><strong>0<span>%</span></strong><small>今日完成</small></div><div class="hero-track"><span style="width:0%"></span></div></section>
+      <div class="content-grid"><section class="panel"><div class="section-heading"><h2>英语 · 四个小步骤</h2><span>按顺序完成</span></div><div class="initial-task"><span class="step-number">01</span><div><h3>唤醒昨天的表达</h3><p>复习 3—5 个旧词组，试着自己造句。</p></div><span>5 分钟</span></div><div class="initial-task"><span class="step-number">02</span><div><h3>认真听懂一小段</h3><p>先听，再看文本，最后重听。</p></div><span>10 分钟</span></div></section><aside class="panel"><span class="tiny-label">用四个步骤，练习英语</span><h2>给自己 40 分钟</h2><p>听懂一点，说出一点，写下一点。</p></aside></div>
+    </div>
+    <footer class="page-footer" id="storage-caption">一步一步，按自己的节奏来。</footer>
+  </main>
+  <nav class="mobile-nav" aria-label="手机导航"><button class="active" data-nav="today"><span>◷</span>今日学习</button><button data-nav="words"><span>Aa</span>四级词汇</button><button data-nav="history"><span>▦</span>打卡日历</button><button data-nav="plan"><span>☷</span>学习计划</button></nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="focus-dialog" aria-labelledby="focus-title"><button class="dialog-close" aria-label="关闭" data-action="close-dialog">×</button><span class="tiny-label" id="focus-kicker">专注这一小步</span><h2 id="focus-title">学习计时</h2><p id="focus-description"></p><div id="timer-display">05:00</div><div class="timer-controls"><button class="primary" id="timer-toggle" data-action="timer-toggle">开始专注</button><button class="secondary" data-action="timer-reset">重置</button></div><button class="text-button" id="timer-complete" data-action="timer-complete">我已完成，打卡这一项</button><p class="dialog-hint">计时仅作辅助，完成学习后再打卡。</p></dialog>
+  <script src="core.js"></script><script src="vocabulary.js"></script><script src="local-store.js"></script><script src="app.js"></script>
+</body>
+</html>
